@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://s0.2mdn.net/6219720/1528387410804/300x250/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Straight Talk 300x250</title>
+  <meta data-template-name="Template_300x250">
+  <meta name="ad.size" content="width=300,height=250">
+  
+  <link rel="stylesheet" type="text/css" href="./bundle.css">
+  <script>
+    var Enabler = null;
+    var clickTag = "https://get.straighttalk.com/keep-your-own-phone/";
+
+  </script>
+<script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script><style></style><script type="text/javascript" src="./tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script></head>
+
+<body class="visible">
+  <div id="main-container" class="unit__container" style="display: block;">
+    <div id="images">
+        <div id="bg1" class="f1-image-1 sprites-bg" style="transform: translate3d(0px, 0px, 0px); opacity: 0;"></div>
+        <div id="bg2" class="f2-image-1 sprites-bg" style="opacity: 0; transform: translate3d(0px, 0px, 0px);"></div>
+        <div id="bg3" class="f3-image-1 sprites-bg" style="opacity: 0; transform: translate3d(0px, 0px, 0px);"></div>
+    </div>
+    <div id="frame4">
+        <div id="f4-copy1" class="f4-copy-1 sprites-all-hd" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="f4-copy2" class="f4-copy-2 sprites-all-hd" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="f4-copy3" class="f4-copy-3 sprites-all-hd" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="legal" class="f4-legal-1 sprites-all-hd" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+        <div id="logo" class="f4-logo-1 sprites-all-hd" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+    </div>
+    <div id="frame3">
+        <div id="f3-copy1" class="copies-3 f3-copy-1 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+        <div id="f3-copy2" class="copies-3 f3-copy-2 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+        <div id="f3-copy3" class="copies-3 f3-copy-3 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+    </div>
+    <div id="frame2">
+        <div id="f2-copy1" class="copies-2 f2-copy-1 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+        <div id="f2-copy2" class="copies-2 f2-copy-2 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+    </div>
+    <div id="frame1">
+      <div id="f1-copy1" class="copies-1 f1-copy-1 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+      <div id="f1-copy2" class="copies-1 f1-copy-2 sprites-copies-hd" style="opacity: 0; transform: matrix(1, 0, 0, 1, 300, 0);"></div>
+    </div>
+
+    <div id="bg-exit" class="bg-exit" onclick="javascript:window.open(window.clickTag)"></div>
+
+
+    <div id="main-cta" class="main-cta f4-cta-1 sprites-cta-hd" onclick="javascript:window.open(window.clickTag)" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+      <span class="sprites-cta-hd"></span>
+    </div>
+
+    <div class="replay" id="replay" style="opacity: 1;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <path d="M8.5,6c0,2-1.6,3.5-3.5,3.5S1.5,8,1.5,6c0-1.9,1.6-3.5,3.5-3.5v1l1.6-0.9l1.6-0.9L6.6,0.9L5,0v1.1c-2.8,0-5,2.2-5,5  s2.2,5,5,5s5-2.2,5-5L8.5,6z"></path>
+      </svg>
+    </div>
+
+  </div>
+  <script src="./bundle.js"></script>
+
+
+
+</body></html>
